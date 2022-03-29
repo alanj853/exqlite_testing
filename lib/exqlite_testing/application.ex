@@ -9,15 +9,7 @@ defmodule ExqliteTesting.Application do
   def start(_type, _args) do
     children = [
       # Start the Ecto repository
-      ExqliteTesting.Repo,
-      # Start the Telemetry supervisor
-      ExqliteTestingWeb.Telemetry,
-      # Start the PubSub system
-      {Phoenix.PubSub, name: ExqliteTesting.PubSub},
-      # Start the Endpoint (http/https)
-      ExqliteTestingWeb.Endpoint
-      # Start a worker by calling: ExqliteTesting.Worker.start_link(arg)
-      # {ExqliteTesting.Worker, arg}
+      ExqliteTesting.Repo
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
