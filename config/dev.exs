@@ -2,7 +2,7 @@ import Config
 
 # Configure your database
 db_timeout = :infinity
-db_dir = "_system/"
+db_dir = System.get_env("DB_DIR") || "_system/"
 
 config :exqlite_testing, ExqliteTesting.Repo,
   reindex: false,
