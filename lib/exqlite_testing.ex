@@ -6,4 +6,8 @@ defmodule ExqliteTesting do
   Contexts are also responsible for managing your data, regardless
   if it comes from the database, an external API or others.
   """
+
+  def show_problem() do
+    Ecto.Migrator.migrated_versions(ExqliteTesting.Repo)
+  end
 end
