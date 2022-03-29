@@ -32,3 +32,5 @@ exqlite_testing-*.tar
 npm-debug.log
 /assets/node_modules/
 
+/_system/
+

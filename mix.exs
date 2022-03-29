@@ -35,8 +35,8 @@ defmodule ExqliteTesting.MixProject do
     [
       {:phoenix, "~> 1.6.2"},
       {:phoenix_ecto, "~> 4.4"},
-      {:ecto_sql, "~> 3.6"},
-      {:postgrex, ">= 0.0.0"},
+      # {:ecto_sql, "~> 3.6"},
+      # {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 3.0"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:phoenix_live_view, "~> 0.16.0"},
@@ -48,7 +48,12 @@ defmodule ExqliteTesting.MixProject do
       {:telemetry_poller, "~> 1.0"},
       {:gettext, "~> 0.18"},
       {:jason, "~> 1.2"},
-      {:plug_cowboy, "~> 2.5"}
+      {:plug_cowboy, "~> 2.5"},
+      {:exqlite, path: "/home/user/src/exqlite", override: true},
+      {:ecto_sqlite3, path: "/home/user/src/ecto_sqlite3", override: true},
+      {:db_connection, path: "/home/user/src/db_connection", override: true},
+      {:ecto, path: "/home/user/src/ecto", override: true},
+      {:ecto_sql, path: "/home/user/src/ecto_sql", override: true},
     ]
   end
 
