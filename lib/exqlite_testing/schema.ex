@@ -4,6 +4,7 @@ defmodule ExqliteTesting.Schema do
 
     schema "weather" do
         field :temp, :integer
+        field :hum, :integer
         field :inserted_at, :naive_datetime
         field :updated_at, :naive_datetime 
     end
@@ -15,6 +16,6 @@ defmodule ExqliteTesting.Schema do
     """
     def changeset(model, params \\ %{}) do
         model
-        |> cast(params, [:temp])
+        |> cast(params, [:temp, :hum])
     end
 end
