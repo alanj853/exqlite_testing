@@ -15,4 +15,17 @@ defmodule ExqliteTesting do
   def show_problem() do
     Ecto.Migrator.migrated_versions(ExqliteTesting.Repo)
   end
+
+  def stop_repo() do
+    Supervisor.terminate_child(ExqliteTesting.Supervisor, ExqliteTesting.Repo)
+  end
+
+  def start_repo() do
+    Supervisor.restart_child(ExqliteTesting.Supervisor, ExqliteTesting.Repo)
+  end
+
+  def restart_repo() do
+    stop_repo()
+    start_repo()
+  end
 end
